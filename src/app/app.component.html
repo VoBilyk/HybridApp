@@ -7,11 +7,15 @@
 </div>
 
 <div> AngularApp Routes:</div>
-<div><a routerLink="/home">Go to Home</a></div>
-<div><a routerLink="/helloapp">Go to HelloApp</a></div>
-<div><a routerLink="/angularjs_a">Go to AngularJs-A</a></div>
-<div><a routerLink="/angularjs_b">Go to AngularJs-B</a></div>
+<div><a href="/home">Go to Home</a></div>
+<div><a href="/helloapp">Go to HelloApp (Working uncorrect)</a></div>
+<div><a href="/numbers#!/any/34">Go to NumbersApp</a></div>
+<div><a href="/example#!/angularjs_a">Go to AngularJs-A</a></div>
+<div><a href="/example#!/angularjs_b">Go to AngularJs-B</a></div>
 
-<div> Route content:</div>
-<router-outlet></router-outlet>
-<div ui-view></div>
+<hr>
+<div style="background: gray"> Route content:
+  <router-outlet></router-outlet>
+  <div ui-view></div>
+  <div ng-view></div>
+</div>

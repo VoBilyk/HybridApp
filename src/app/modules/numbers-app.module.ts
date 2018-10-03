@@ -20,14 +20,14 @@ export class EmptyComponent {}
     EmptyComponent
   ]
 })
-export class ExampleJsAppModule {
-  modulenJsName = 'AngularJSApp';
-  moduleJsPath = 'http://localhost/angularjs/angularjsapp.js';
+export class NumbersJsAppModule {
+  modulenJsName = 'NumbersJSApp';
+  moduleJsPath = 'http://localhost/angularjs/ng-js-numbers.js';
 
   constructor(upgrade: UpgradeModule, scriptLoaderService: ScriptLoaderService) {
     scriptLoaderService.setExternalScript(this.moduleJsPath)
     .then(() => {
-      upgrade.bootstrap(document.body, [this.modulenJsName], {strictDi: true});
+      upgrade.bootstrap(document.body, [this.modulenJsName]);
       setUpLocationSync(upgrade);
     });
   }

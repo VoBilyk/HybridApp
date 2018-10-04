@@ -25,15 +25,15 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
 .then(pf => {
-  const urlService: UrlService = pf.injector.get(UIRouter).urlService;
+  // const urlService: UrlService = pf.injector.get(UIRouter).urlService;
 
-  // Instruct UIRouter to listen to URL changes
-  function startUIRouter() {
-    urlService.listen();
-    urlService.sync();
-  }
+  // // Instruct UIRouter to listen to URL changes
+  // function startUIRouter() {
+  //   urlService.listen();
+  //   urlService.sync();
+  // }
 
-   pf.injector.get<NgZone>(NgZone).run(startUIRouter);
+  //  pf.injector.get<NgZone>(NgZone).run(startUIRouter);
 })
   .catch(err => console.error(err));
 

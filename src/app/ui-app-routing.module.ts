@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 // import { Routes, RouterModule } from '@angular/router';
-// import { UIRouterModule } from '@uirouter/angular';
-import { UIRouterUpgradeModule, NgHybridStatesModule } from '@uirouter/angular-hybrid';
+import { UIRouterModule, StatesModule } from '@uirouter/angular';
+// import { UIRouterUpgradeModule, NgHybridStatesModule } from '@uirouter/angular-hybrid';
 import { HomeComponent } from './components/home-component/home.component';
 
-const routes: NgHybridStatesModule = {
+const routes: StatesModule = {
   states: [
     {
       name: 'root',
@@ -35,8 +35,8 @@ const routes: NgHybridStatesModule = {
 };
 
 @NgModule({
-  imports: [UIRouterUpgradeModule.forRoot(routes)],
-  exports: [UIRouterUpgradeModule]
+  imports: [UIRouterModule.forRoot(routes)],
+  exports: [UIRouterModule]
 })
 export class UiAppRoutingModule {
 }

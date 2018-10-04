@@ -1,4 +1,3 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -7,15 +6,19 @@
 </div>
 
 <div> AngularApp Routes:</div>
-<div><a href="/home">Go to Home</a></div>
-<div><a href="/helloapp">Go to HelloApp (Working uncorrect)</a></div>
-<div><a href="/numbers#!/any/34">Go to NumbersApp</a></div>
-<div><a href="/example#!/angularjs_a">Go to AngularJs-A</a></div>
-<div><a href="/example#!/angularjs_b">Go to AngularJs-B</a></div>
+<hr>
+<div><a ui-sref="home">Go to Home</a></div>
+<div><a ui-sref="helloapp.hi">Go to HelloApp</a></div>
+<div><a routerLink="/numbers#!/34">Go to NumbersApp</a></div>
+<div><a routerLink="/example">Go to AngularJs root</a></div>
+<div><a ui-sref="example.nested_a">Go to AngularJs-A</a></div>
+<div><a ui-sref="example.nested_b">Go to AngularJs-B</a></div>
 
 <hr>
 <div style="background: gray"> Route content:
-  <router-outlet></router-outlet>
-  <div ui-view></div>
-  <div ng-view></div>
+  <ui-view></ui-view>
+
+  <!-- <router-outlet></router-outlet> -->
+  <!-- <div ui-view></div>
+  <div ng-view></div> -->
 </div>

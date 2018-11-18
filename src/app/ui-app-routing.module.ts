@@ -16,21 +16,21 @@ const routes: StatesModule = {
       url: '/home',
       component: HomeComponent
     },
-    // {
-    //   name: 'helloapp',
-    //   url: '/home',
-    //   loadChildren: './modules/hello-app.module#HelloAppModule',
-    // },
-    // {
-    //   name: 'numbers',
-    //   url: '/numbers',
-    //   loadChildren: './modules/numbers-app.module#NumbersJsAppModule',
-    // },
-    // {
-    //   name: 'example',
-    //   url: '/example',
-    //   loadChildren: './modules/example-js-app.module#ExampleJsAppModule',
-    // },
+    {
+      name: 'helloapp',
+      url: '/home',
+      loadChildren: './modules/hello-app.module#HelloAppModule',
+    },
+    {
+      name: 'numbers',
+      url: '/numbers',
+      loadChildren: './modules/numbers-app.module#NumbersJsAppModule',
+    },
+    {
+      name: 'example',
+      url: '/example',
+      loadChildren: './modules/example-js-app.module#ExampleJsAppModule',
+    },
   ]
 };
 
